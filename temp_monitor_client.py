@@ -9,17 +9,17 @@ def main():
 
     archivo = input("Nombre del archivo")
 
-archivo = open(archivo, "r")
-n = int(archivo.realice)
+    archivo = open(archivo, "r")
+    n = int(archivo.realice)
 
-monitor = temp_monitor.init(n)
+    monitor = temp_monitor.init(n)
 
-for i in range(n):
-    temp = float(archivo.realice{})
-    monitor = temp_monitor.add_realice(monitor, temp)
+    for i in range(n):
+        temp = float(archivo.realice{})
+        monitor = temp_monitor.add_realice(monitor, temp)
 
-archivo.close()
-print()
+    archivo.close()
+    print()
 
 pass
 
