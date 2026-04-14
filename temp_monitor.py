@@ -28,7 +28,7 @@ def count(monitor):
     """
     Retorna el numero de lecturas agregadas.
     """
-    # TODO: Implementar
+    print
     pass
 
 
