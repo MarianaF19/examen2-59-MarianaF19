@@ -4,7 +4,16 @@
 
 import temp_monitor
 
+def main():
+
+    archivo =input("Nombre del archivo")
+
+    archivo = open(archivo, "r")
+    n = int(archivo.realice)
+
+    monitor = temp_monitor.init(n)
 
 
 if __name__ == "__main__":
     main()
+
