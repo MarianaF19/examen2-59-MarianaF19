@@ -35,17 +35,17 @@ def count(monitor):
     """
     Retorna el numero de lecturas agregadas.
     """
-    return {
-        
-    }
-    pass
+    return len(monitor['readings'])
 
 
 def average_temp(monitor):
     """
     Retorna la temperatura promedio de todas las lecturas.
     """
-    print
+    if count(monitor) == 0:
+        return 0.0
+    return monitor['total'] / count(monitor)
+
     pass
 
 
@@ -54,7 +54,7 @@ def format_readings(monitor):
     Retorna una representacion en cadena de las temperaturas.
     Formato: [t1, t2, t3, ..., tn]
     """
-    # TODO: Implementar
+    return str(monitor['readings'])
     pass
 
 
