@@ -4,18 +4,25 @@
 
 import temp_monitor
 
+
 def main():
-
-    archivo =input("Nombre del archivo")
-
-    archivo = open(archivo, "r")
-    n = int(archivo.realice)
-
+   
+    archivochivo = input("Nombre del archivo: ")
+    
+    archivo = open(archivo, 'r')
+    n = int(archivo.readline())
+    
     monitor = temp_monitor.init(n)
+    
+    for i in range(n):
+        temp = float(archivo.readline())
+        monitor = temp_monitor.add_reading(monitor, temp)
+    
+    archivo.close()
+    print(temp_monitor.longest_rising_streak(monitor))
+    
+    pass
 
 
-
-pass
-
-if __name__ == "__main__":
+if __name__ == "_main_":
     main()
