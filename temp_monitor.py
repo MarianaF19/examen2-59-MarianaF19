@@ -62,7 +62,7 @@ def highest_temp(monitor):
     """
     Retorna la temperatura mas alta de cualquier lectura.
     """
-    # TODO: Implementar
+    return max(monitor['readings'])
     pass
 
 
@@ -70,7 +70,13 @@ def coldest_window(monitor, k):
     """
     Retorna el promedio mas bajo de cualquier k lecturas consecutivas.
     """
-    # TODO: Implementar
+    readings = monitor['readings']
+    min_avg = float('inf')
+    for i in range(len(readings) - k + 1):
+        window_avg = sum(readings[i:i + k]) / k
+        if window_avg < min_avg:
+            min_avg = window_avg
+    return min_avg
     pass
 
 
@@ -79,7 +85,7 @@ def longest_rising_streak(monitor):
     Retorna la longitud maxima de una secuencia de lecturas consecutivas
     donde las temperaturas aumentan estrictamente.
     """
-    # TODO: Implementar
+    
     pass
 
 
