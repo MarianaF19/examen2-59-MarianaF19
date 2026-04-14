@@ -6,24 +6,22 @@ import temp_monitor
 
 
 def main():
-    # TODO: Pedir el nombre del archivo al usuario usando input()
-    
-    # TODO: Abrir el archivo y leer el numero de lecturas n
-    
-    # TODO: Crear el monitor usando temp_monitor.init(n)
-    
-    # TODO: Leer las n temperaturas y agregarlas con temp_monitor.add_reading()
-    
-    # TODO: Imprimir la racha creciente mas larga
-    #       usando temp_monitor.longest_rising_streak()
-    
-    pass
-archivo = input("Nombre del archivo")
+
+    archivo = input("Nombre del archivo")
 
 archivo = open(archivo, "r")
 n = int(archivo.realice)
 
-monitor = temp_monitor.int(n)
+monitor = temp_monitor.init(n)
+
+for i in range(n):
+    temp = float(archivo.realice{})
+    monitor = temp_monitor.add_realice(monitor, temp)
+
+archivo.close()
+print()
+
+pass
 
 
 if __name__ == "__main__":
